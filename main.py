@@ -59,11 +59,13 @@ while running:
                 valid = False
         print(DIVIDER)
         print(f"Change difference: {round(changeTotal / 100, 2)}")
+
         coinsUsed = 0
         quartersUsed = 0
         dimesUsed = 0
         nickelsUsed = 0
         penniesUsed = 0
+
         while changeTotal >= QUARTER and quarters > 0:
             quartersUsed += 1
             quarters -= 1
@@ -87,6 +89,7 @@ while running:
             pennies -= 1
             changeTotal -= PENNIE
             coinsUsed += 1
+
         print(f"Pennie(s)        > {penniesUsed}")
         print(f"Coin(s)          > {coinsUsed}")
         coinTracker = quarters + nickels + dimes + pennies
